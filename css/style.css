@@ -702,20 +702,20 @@ footer ul li{
 	animation: facebook 20s ease-out infinite ;
 }
     @keyframes facebook {
-        0% {transform: scale(1) rotateZ(0);}
-        5% {transform: scale(2) rotateZ(180deg);}
-        10% {transform: scale(1) rotateZ(360deg);}
-        100% {transform: scale(1) rotateZ(360deg);}
+        0% {transform: scale(1) rotateX(0);}
+        5% {transform: scale(2) rotateX(180deg);}
+        10% {transform: scale(1) rotateX(360deg);}
+        100% {transform: scale(1) rotateX(360deg);}
     }
 
 .instagram {
     animation: instagram 20s ease-out infinite ;
 }
     @keyframes instagram {
-        25% {transform: scale(1) rotateX(0);}
-        30% {transform: scale(2) rotatex(180deg);}
-        35% {transform: scale(1) rotatex(360deg);}
-        100% {transform: scale(1) rotatex(360deg);}
+        25% {transform: scale(1) rotateZ(0);}
+        30% {transform: scale(2) rotateZ(180deg);}
+        35% {transform: scale(1) rotateZ(360deg);}
+        100% {transform: scale(1) rotateZ(360deg);}
     }
 
 .youtube {
@@ -737,4 +737,37 @@ footer ul li{
         80% {transform: scale(2) rotateZ(180deg);}
         85% {transform: scale(1) rotateZ(360deg);}
         100% {transform: scale(1) rotateZ(360deg);}
+    }
+
+
+.imagenesAnimation {
+    animation: imagenesAnimation 0.65s linear both;
+}
+    @keyframes imagenesAnimation {
+        0% {transform: translatex(500px) ;}
+        100% {transform: translatex(0px);}
+    }
+
+.imagenesAnimation2 {
+    animation: imagenesAnimation2 0.65s linear both;
+}
+    @keyframes imagenesAnimation2 {
+        0% {transform: translatex(-500px) ;}
+        100% {transform: translatex(0px);}
+    }
+
+.imagenesAnimation3 {
+    animation: imagenesAnimation3 0.65s linear both;
+}
+    @keyframes imagenesAnimation3 {
+        0% {transform: translatey(-500px) ;}
+        100% {transform: translatey(0px);}
+    }
+
+.imagenesAnimation4 {
+    animation: imagenesAnimation4 2s linear both;
+}
+    @keyframes imagenesAnimation4 {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
     }
