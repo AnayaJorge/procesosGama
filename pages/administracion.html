@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administración</title>
     <!-- Aca se inserta el link de las fuentes -->
+    <!-- Bootstrap. CDN de Bootstrap arriba del CSS para que nuestro código de CSS pise lo que tiene por defecto Bootsstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- Insertar CSS en el HTML -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -16,25 +18,52 @@
             <div class="titleGeneral">PROCESOS</div>
         </header>
 
-        <nav class="nav">
-            <ul class="menuNav">   
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./politica.html">Política</a></li>
-                <li class="actual"><a href="./procesos.html">Procesos</a>
-                    <ul class="submenuNav">
-                        <li><a href="./administracion.html">Administración</a></li>
-                        <li><a href="./administracionobra.html">Administración de Obra</a></li>
-                        <li><a href="./cobranza.html">Cobranza</a></li>
-                        <li><a href="./obra.html">Obra</a></li>
-                        <li><a href="./tecnica.html">Técnica</a></li>
-                    </ul></li>
-                <li><a href="./documentos.html">Documentos</a></li>
-                <li><a href="./formularios.html">Formularios</a></li>
-                <li><a href="./puestos.html">Puestos</a></li>
-                <li><a href="./contacto.html" target="_blank">Contacto</a></li>
-            </ul>
+        <nav class="nav navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav menuNav">
+                    <li class="nav-item">
+                        <a aria-current="page" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./politica.html">Política</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="actual" href="./procesos.html">Procesos</a>
+                        <ul class="submenuNav">
+                            <li><a href="./administracion.html">Administración</a></li>
+                            <li><a href="./administracionobra.html">Administración de Obra</a></li>
+                            <li><a href="./cobranza.html">Cobranza</a></li>
+                            <li><a href="./obra.html">Obra</a></li>
+                            <li><a href="./tecnica.html">Técnica</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./documentos.html">Documentos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./formularios.html">Formularios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./puestos.html">Puestos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
         
+        <!-- <div id="list-example" class="list-group detailMenu">
+            <a class="list-group-item list-group-item-action" href="#panelsStayOpen-heading1">1 - Objetivo</a>
+            <a class="list-group-item list-group-item-action" href="#panelsStayOpen-heading2">2 - Alcance</a>
+            <a class="list-group-item list-group-item-action" href="#panelsStayOpen-heading3">3 - </a>
+            <a class="list-group-item list-group-item-action" href="#panelsStayOpen-heading4">4 - </a>
+        </div> -->
+        
+<!-- 
         <div class="detailMenu">
             <ul class="sideMenu">
                 <li><div class="headerSideMenu">Detalle</div>
@@ -48,114 +77,215 @@
                     </ul> 
                 </li>
             </ul>
-        </div>
-
+        </div> -->
         <article class="tittleProcesos">
             <h1>Gestión Administrativa de Productos</h1>
         </article>
 
-        <div class="textProcesos">
-            <div><h2>1 Objetivo</h2></div>
-            <div><span class="new">Establecer metodología para todas aquellas</span><span class="erase"> elemento a leminar</span> metodología para todas aquellas tareas administrativas que involucren a los productos Gama atendiendo los requisitos de nuestros clientes en pos de asegurar la calidad del servicio a los mismos. </div>
-            <div><h2>2 Alcance</h2></div>
-            <div>Se describen los pasos administrativos en los que interviene el cliente a partir de la efectivización de la operación comercial hasta el momento de la escritura de la unidad.</div>
-            <div><h2>3 Funciones Intervinientes</h2></div>
-            <div>
-                <ul class="listDots">
-                    <li>Administrativo</li>
-                    <li>Gerente Administración</li>
-                    <li>Gerente Técnica</li>
-                    <li>Gestor de Mora</li>
-                    <li>Tesorero</li>
-                    <li>Administrativo de Servcios al Cliente</li>
-                </ul>
+
+        <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="textProcesos scrollspy-example" tabindex="0">
+
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header m-0" id="panelsStayOpen-heading1 list-item-1">
+                        <button class="accordion-button collapsed collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse1" aria-expanded="false" aria-controls="panelsStayOpen-collapse1">
+                            1 - Objetivo
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapse1" class="accordion-collapse collapse collapse" aria-labelledby="panelsStayOpen-heading1">
+                        <div class="accordion-body">
+                            <span class="new">Establecer metodología para todas aquellas</span><span class="erase"> elemento a leminar</span> metodología para todas aquellas tareas administrativas que involucren a los productos Gama atendiendo los requisitos de nuestros clientes en pos de asegurar la calidad del servicio a los mismos.
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div><h2>4 Responsable del Proceso</h2></div>
-            <div>
-                <ul class="listDots">
-                    <li>Gerente Administración</li>
-                </ul>
+            <div class="separator"></div>
+
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header m-0" id="panelsStayOpen-heading2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse2" aria-expanded="true" aria-controls="panelsStayOpen-collapse2">
+                            2 - Alcance
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapse2" class="accordion-collapse collapse collapse" aria-labelledby="panelsStayOpen-heading2">
+                        <div class="accordion-body">
+                            Se describen los pasos administrativos en los que interviene el cliente a partir de la efectivización de la operación comercial hasta el momento de la escritura de la unidad. 
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div><h2>5 Control de Cambios</h2></div>
-            <div>
-                <table>
-                    <tr class="tableTitle">
-                        <td class="tableRev">Revisión</td>
-                        <td class="tableDate">Fecha</td>
-                        <td class="tableName">Elaboró</td>
-                        <td class="tableChange">Cambio</td>
-                    </tr>
-                    <tr>
-                        <td class="tableRev">0</td>
-                        <td class="tableDate">18/06/2010</td>
-                        <td class="tableName">Verónica Luque</td>
-                        <td class="tableChange">Confeción documento</td>
-                    </tr>
-                    <tr>
-                        <td class="tableRev">1</td>
-                        <td class="tableDate">26/12/2011</td>
-                        <td class="tableName">Verónica Luque / Susana García</td>
-                        <td class="tableChange">Modificaciones en puntos 7.1.3 y 7.5. 
-                            Se agregaron puntos 7.6 y 7.7</td>
-                    </tr>
-                    <tr>
-                        <td class="tableRev">2</td>
-                        <td class="tableDate">25/04/2011</td>
-                        <td class="tableName">Verónica Luque</td>
-                        <td class="tableChange">Modificaciones en puntos 7.1, 7.1.3, 7.2, 7.3, 7.4 y 7.6</td>
-                    </tr>
-                    <tr>
-                        <td class="tableRev">3</td>
-                        <td class="tableDate">16/04/2012</td>
-                        <td class="tableName">Gabriela Petrone</td>
-                        <td class="tableChange">Modificaciones en puntos 2, 3, 6 y 7.5</td>
-                    </tr>
-                    <tr>
-                        <td class="tableRev">4</td>
-                        <td class="tableDate">13/04/2014</td>
-                        <td class="tableName">Verónica Luque / Susana García</td>
-                        <td class="tableChange">Modificaciones en 7.1.2. Depósitos / Transferencia / Cobranza Integrada. Elimina punto Gestión de Mora, ya que tendrá su propio Procedimiento. 7.6 escrituración de Propiedades</td>
-                    </tr>
-                </table>
+            <div class="separator"></div>
+
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header m-0" id="panelsStayOpen-heading3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse3" aria-expanded="true" aria-controls="panelsStayOpen-collapse3">
+                            3 - Funciones Intervinientes
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapse3" class="accordion-collapse collapse collapse" aria-labelledby="panelsStayOpen-heading3">
+                        <div class="accordion-body">
+                            <ul class="listDots">
+                                <li>Administrativo</li>
+                                <li>Gerente Administración</li>
+                                <li>Gerente Técnica</li>
+                                <li>Gestor de Mora</li>
+                                <li>Tesorero</li>
+                                <li>Administrativo de Servcios al Cliente</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div><h2>6 Definiciones</h2></div>
-            <div>
-                <ul class="listDots">
-                    <li><b>Cesión: </b>Hay cesión de boleto de compraventa de inmueble cuando una de las partes otorgante del boleto, denominada “cedente“, transfiere a un tercero, denominado “cesionario“,  los derechos y obligaciones que tiene y le corresponde sobre el boleto de compraventa vinculante a favor de otra persona (cesionario) quien pasa a ocupar el mismo lugar, grado y prelación.</li>
-                    <li><b>Sustitución: </b>Cambio de la unidad objeto de venta por otra de similares características o no que implica incluir un anexo complementario al boleto de compraventa estableciendo el cambio del objeto de venta y la nueva modalidad de pago en caso de corresponder.</li>
-                </ul>
+            <div class="separator"></div>
+
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header m-0" id="panelsStayOpen-heading4">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse4" aria-expanded="true" aria-controls="panelsStayOpen-collapse4">
+                            4 - Responsable del Proceso
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapse4" class="accordion-collapse collapse collapse" aria-labelledby="panelsStayOpen-heading4">
+                        <div class="accordion-body">
+                            <ul class="listDots">
+                                <li>Gerente Administración</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div><h2>7 Desarrollo</h2></div>
-            <div><h3>7.1 Cobranza</h3></div>
-            <div>Diariamente el tesorero efectuará una revisión de la cotización de moneda extranjera de acuerdo al valor del mercado, y en caso de corresponder actualizará el sistema INSIS. </div>
-            <div><h4>7.1.1 Efectivo / Cheques</h4></div>
-            <div>Cuando el cliente se presenta en la oficina de Administración para abonar las cuotas, el personal solicita apellido, nombre y, en caso de ser necesario, unidad habitacional para ubicarlo en el sistema INSIS e identificar los pagos que desea realizar.</div>
-            <div>Una vez seleccionadas las cuotas a abonar y el modo de pago, se genera el comprobante por duplicado, y se remite al cliente a Tesorería para efectivizar el pago. El tesorero, una vez realizado el pago, firma y sella el comprobante que será entregado al cliente y conserva la segunda copia para controles posteriores y archivo. Finalmente el tesorero registra el ingreso del pago en el sistema.</div>
-            <div><h2>8 Documentación de Referencia</h2></div>
-            <div>
-                <ul class="listDots">
-                    <li>I-7.3.3-18 “Trámites Administrativos Ante Organismos Municipales”</li>
-                    <li>R-7.2.1-14 “CBU Para Depósitos y Transferencias”</li>
-                    <li>R-7.2.1-15 “Listado de Clientes con Envío Postal de Recibos”</li>
-                    <li>R-7.2.1-16 “Control Retiro de Recibos por Depósitos y/o Transferencias”</li>
-                    <li>R-7.2.1-17 “Cesiones-Datos del cliente”</li>
-                    <li>R-7.2.1-18 “Seguimiento de Cesiones”</li>
-                    <li>R-7.2.1-19 “Seguimiento de Sustituciones”</li>	
-                    <li>R-7.2.1-20 “Cobranza Integrada”</li>
-                    <li>R-7.2.1-21 “Listado de Clientes con Cobranza Integrada”</li>
-                    <li>R-7.2.1-23 “Informes de propiedad”</li>
-                    <li>R-7.2.1-24 “Tarjeta de Acreditación de Entrega”</li>
-                    <li>R-7.2.1-26 “Seguimiento de Entregas”</li>
-                    <li>R-7.2.1-27 “Informe a Escribanía”</li>
-                    <li>R-7.2.1-29 “Documentos entregados al cliente”</li>
-                    <li>Cesión del Boleto de Compraventa</li>
-                    <li>Acuerdo de Sustitución</li>
-                    <li>Acta de Entrega de Tenencia</li>
-                    <li>Correspondencia de Correo Argentino</li>
-                    <li>Reglamento de Copropiedad</li>
-                    <li>Manual del Propietario</li>
-                </ul>
+            <div class="separator"></div>
+
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header m-0" id="panelsStayOpen-heading5">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse5" aria-expanded="true" aria-controls="panelsStayOpen-collapse5">
+                            5 - Control de Cambios
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapse5" class="accordion-collapse collapse collapse" aria-labelledby="panelsStayOpen-heading5">
+                        <div class="accordion-body">
+                            <table>
+                                <tr class="tableTitle">
+                                    <td class="tableRev">Revisión</td>
+                                    <td class="tableDate">Fecha</td>
+                                    <td class="tableName">Elaboró</td>
+                                    <td class="tableChange">Cambio</td>
+                                </tr>
+                                <tr>
+                                    <td class="tableRev">0</td>
+                                    <td class="tableDate">18/06/2010</td>
+                                    <td class="tableName">Verónica Luque</td>
+                                    <td class="tableChange">Confeción documento</td>
+                                </tr>
+                                <tr>
+                                    <td class="tableRev">1</td>
+                                    <td class="tableDate">26/12/2011</td>
+                                    <td class="tableName">Verónica Luque / Susana García</td>
+                                    <td class="tableChange">Modificaciones en puntos 7.1.3 y 7.5. 
+                                        Se agregaron puntos 7.6 y 7.7</td>
+                                </tr>
+                                <tr>
+                                    <td class="tableRev">2</td>
+                                    <td class="tableDate">25/04/2011</td>
+                                    <td class="tableName">Verónica Luque</td>
+                                    <td class="tableChange">Modificaciones en puntos 7.1, 7.1.3, 7.2, 7.3, 7.4 y 7.6</td>
+                                </tr>
+                                <tr>
+                                    <td class="tableRev">3</td>
+                                    <td class="tableDate">16/04/2012</td>
+                                    <td class="tableName">Gabriela Petrone</td>
+                                    <td class="tableChange">Modificaciones en puntos 2, 3, 6 y 7.5</td>
+                                </tr>
+                                <tr>
+                                    <td class="tableRev">4</td>
+                                    <td class="tableDate">13/04/2014</td>
+                                    <td class="tableName">Verónica Luque / Susana García</td>
+                                    <td class="tableChange">Modificaciones en 7.1.2. Depósitos / Transferencia / Cobranza Integrada. Elimina punto Gestión de Mora, ya que tendrá su propio Procedimiento. 7.6 escrituración de Propiedades</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <div class="separator"></div>
+
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header m-0" id="panelsStayOpen-heading6">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse6" aria-expanded="true" aria-controls="panelsStayOpen-collapse6">
+                            6 - Definiciones
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapse6" class="accordion-collapse collapse collapse" aria-labelledby="panelsStayOpen-heading6">
+                        <div class="accordion-body">
+                            <ul class="listDots">
+                                <li><b>Cesión: </b>Hay cesión de boleto de compraventa de inmueble cuando una de las partes otorgante del boleto, denominada “cedente“, transfiere a un tercero, denominado “cesionario“,  los derechos y obligaciones que tiene y le corresponde sobre el boleto de compraventa vinculante a favor de otra persona (cesionario) quien pasa a ocupar el mismo lugar, grado y prelación.</li>
+                                <li><b>Sustitución: </b>Cambio de la unidad objeto de venta por otra de similares características o no que implica incluir un anexo complementario al boleto de compraventa estableciendo el cambio del objeto de venta y la nueva modalidad de pago en caso de corresponder.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="separator"></div>
+
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header m-0" id="panelsStayOpen-heading7">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse7" aria-expanded="true" aria-controls="panelsStayOpen-collapse7">
+                            7 - Desarrollo
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapse7" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-heading7">
+                        <div class="accordion-body">
+                            <div><h3>7.1 Cobranza</h3></div>
+                            <div>Diariamente el tesorero efectuará una revisión de la cotización de moneda extranjera de acuerdo al valor del mercado, y en caso de corresponder actualizará el sistema INSIS. </div>
+                            <div><h4>7.1.1 Efectivo / Cheques</h4></div>
+                            <div>Cuando el cliente se presenta en la oficina de Administración para abonar las cuotas, el personal solicita apellido, nombre y, en caso de ser necesario, unidad habitacional para ubicarlo en el sistema INSIS e identificar los pagos que desea realizar.</div>
+                            <div>Una vez seleccionadas las cuotas a abonar y el modo de pago, se genera el comprobante por duplicado, y se remite al cliente a Tesorería para efectivizar el pago. El tesorero, una vez realizado el pago, firma y sella el comprobante que será entregado al cliente y conserva la segunda copia para controles posteriores y archivo. Finalmente el tesorero registra el ingreso del pago en el sistema.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header m-0" id="panelsStayOpen-heading8">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse8" aria-expanded="true" aria-controls="panelsStayOpen-collapse8">
+                            8 - Documentación de Referencia
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapse8" class="accordion-collapse collapse collapse" aria-labelledby="panelsStayOpen-heading8">
+                        <div class="accordion-body">
+                            <ul class="listDots">
+                                <li>I-7.3.3-18 “Trámites Administrativos Ante Organismos Municipales”</li>
+                                <li>R-7.2.1-14 “CBU Para Depósitos y Transferencias”</li>
+                                <li>R-7.2.1-15 “Listado de Clientes con Envío Postal de Recibos”</li>
+                                <li>R-7.2.1-16 “Control Retiro de Recibos por Depósitos y/o Transferencias”</li>
+                                <li>R-7.2.1-17 “Cesiones-Datos del cliente”</li>
+                                <li>R-7.2.1-18 “Seguimiento de Cesiones”</li>
+                                <li>R-7.2.1-19 “Seguimiento de Sustituciones”</li>	
+                                <li>R-7.2.1-20 “Cobranza Integrada”</li>
+                                <li>R-7.2.1-21 “Listado de Clientes con Cobranza Integrada”</li>
+                                <li>R-7.2.1-23 “Informes de propiedad”</li>
+                                <li>R-7.2.1-24 “Tarjeta de Acreditación de Entrega”</li>
+                                <li>R-7.2.1-26 “Seguimiento de Entregas”</li>
+                                <li>R-7.2.1-27 “Informe a Escribanía”</li>
+                                <li>R-7.2.1-29 “Documentos entregados al cliente”</li>
+                                <li>Cesión del Boleto de Compraventa</li>
+                                <li>Acuerdo de Sustitución</li>
+                                <li>Acta de Entrega de Tenencia</li>
+                                <li>Correspondencia de Correo Argentino</li>
+                                <li>Reglamento de Copropiedad</li>
+                                <li>Manual del Propietario</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
         <footer class="footerProcesos">
             <ul class="footer">
@@ -172,5 +302,7 @@
             </ul>
         </footer>
     </div>
+    <!-- Bootstrap: Bundle para que funcione JavaScript plugins and Popper. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -113,7 +113,6 @@ footer{
     "header"
     "nav"
     "titleProcesos"
-    "detailMenu"
     "textoProcesos"
     "footer";
 }
@@ -172,10 +171,14 @@ nav{
     margin-right: 5px;
     font-size: 14px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     border-bottom: 2px lightgray solid ;
 }
 
+.menuNav{
+    margin: 0;
+    padding: 0;
+}
 .menuNav > li{
     position:relative;
     display: inline-block;
@@ -194,7 +197,6 @@ nav{
     color:whitesmoke;
     background-color: grey;
     transition: all .4s;
-
 }
 
 .submenuNav{
@@ -202,6 +204,7 @@ nav{
     background-color: grey;
     width: 250px;
     margin: 0px 0px;
+    padding: 0;
     visibility: hidden;
     opacity: 0;
     transition: opacity 1.5s;
@@ -212,73 +215,6 @@ nav{
     border-bottom: 5px #d10613 solid;
     background-color: rgb(230, 230, 230);
 }
-
-
-
-/* Menu lateral procesos */
-
-.sideMenu{
-    background-color: var(--bgcolor);
-    color: black;
-    width: 90vw;
-}
-
-.sideMenu > li{
-    display: inline-block;
-}
-
-.sideMenu > li > div{
-    display: block;
-    padding: 5px;
-    color: grey;
-    border-bottom: solid 2px whitesmoke;
-    text-decoration: none;
-}
-
-.sideMenu li div:hover{
-    color:whitesmoke;
-    background-color: grey;
-    transition: all .5s;
-
-}
-
-.headerSideMenu{
-    box-sizing: border-box;
-    border-bottom: solid 4px var(--borderColor);
-    font-weight: bold;
-    width: 90vw;
-}
-
-.sideMenuItems{
-    position: absolute;
-    background-color: grey;
-    width: 90vw;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 1.5s;
-    
-}
-
-.sideMenuItems li div{
-    display: block;
-    padding: 5px;
-    color: whitesmoke;
-    text-decoration: none;
-}
-
-
-.sideMenu li:hover .sideMenuItems{
-    visibility: visible;
-    opacity: 1;
-}
-
-.sideMenuItems li div:hover{
-    color:gray;
-    background-color: lightgrey;
-    transition: all .5s;
-}
-
-
 
 /* Images */
 .imagenIndex{
@@ -308,6 +244,21 @@ nav{
 
 
 /* textos */
+
+.accordion-button{
+    position: static;
+}
+.accordion-button:not(.collapsed) {
+    position: static;
+    color: grey;
+    background-color: whitesmoke;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+}
+
+.accordion-button:not(.collapsed)::after{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
 h1{
     font-size: 30px;
 }
@@ -318,8 +269,8 @@ h2{
     padding: 5px;
 }
 
-h3{
-    font-size: 20px;
+h3, h4{
+    font-size: 18px;
     padding: 10px;
 }
 
@@ -346,11 +297,14 @@ h3{
     padding-bottom: 10px;
     text-align: justify;
 }
+.tittleProcesos{
+    padding: 20px 20px 10px 10px;
+}
 
 .textProcesos{
     display: flex;
     display: row;
-    padding: 5px;
+    padding: 5px 40px 20px 40px;
     display: flex;
     flex-direction: column;
 }
@@ -375,6 +329,14 @@ h3{
 .listDots li a{
     text-decoration: none;
     color: grey;
+}
+
+.textContacto {
+    margin: 0px 20px 0px 20px;
+}
+
+.separator{
+    height: 10px;
 }
 
 
@@ -411,32 +373,8 @@ table .tableChange{
     text-align: justify;
 }
 
-
-
-
-.formulario{
-    margin: 5px 40px;
-}
-.formulario, .formulario tr,.formulario td{
-    border: none;
-    border-collapse: collapse;
-    padding: 5px;
-}
-
 table .tableTitle{
     font-weight: bold;
-}
-
-table .formularioQuestion{
-    width: 50%;
-    text-align: right;
-    vertical-align: top;
-}
-
-table .formularioAnswer{
-    width: 50%;
-    text-align: left;
-    vertical-align: top;
 }
 
 table .tableBottom{
@@ -515,36 +453,22 @@ footer ul li{
         display: grid;
         gap: 5px;
         grid-template-areas: 
-        "header header"
-        "nav nav"
-        "detailMenu titleProcesos"
-        "detailMenu textoProcesos"
-        "footer footer";
-        grid-template-columns: 1fr 3fr;
+        "header"
+        "nav"
+        "titleProcesos"
+        "textoProcesos"
+        "footer";
     }
-
-    .submenuNav li a{
-        display: block;
-        padding: 10px;
-        color: whitesmoke;
-        text-decoration: none;
+    .textProcesos{
+        display: flex;
+        display: row;
+        display: flex;
+        flex-direction: column;
     }
-    
-    .menuNav li:hover .submenuNav{
-        visibility: visible;
-        opacity: 1;
-    }
-    
-    .submenuNav li a:hover{
-        color:gray;
-        background-color: lightgrey;
-        transition: all .5s;
-    }
-
 
     /* Menu lateral procesos */
 
-    .sideMenu{
+    /* .sideMenu{
         background-color: var(--bgcolor);
         color: black;
         width: 25%;
@@ -604,22 +528,37 @@ footer ul li{
         color:black;
         background-color:  var(--bgcolor);
         transition: none;
-    }
+    } */
     
-
-
-    .textProcesos{
-        display: flex;
-        display: row;
-        padding: 5px 20px 20px 20px;
-        display: flex;
-        flex-direction: column;
-    }
 
     /* .footerProcesos{
         margin-left: var(--width);
     } */
 
+}
+
+@media (min-width:992px){
+    .navbar-expand-lg .navbar-collapse{
+        flex-direction: row-reverse;
+    }
+
+    .submenuNav li a{
+        display: block;
+        padding: 10px;
+        color: whitesmoke;
+        text-decoration: none;
+    }
+    
+    .menuNav li:hover .submenuNav{
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    .submenuNav li a:hover{
+        color:gray;
+        background-color: lightgrey;
+        transition: all .5s;
+    }
 }
 
 @media (min-width:1024px){
@@ -744,7 +683,7 @@ footer ul li{
     animation: imagenesAnimation 0.65s linear both;
 }
     @keyframes imagenesAnimation {
-        0% {transform: translatex(500px) ;}
+        0% {transform: translatex(-500px) ;}
         100% {transform: translatex(0px);}
     }
 
