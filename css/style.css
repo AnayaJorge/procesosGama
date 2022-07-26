@@ -681,6 +681,7 @@ footer ul li{
 
 .imagenesAnimation {
     animation: imagenesAnimation 0.65s linear both;
+    z-index: -1;
 }
     @keyframes imagenesAnimation {
         0% {transform: translatex(-500px) ;}
@@ -688,7 +689,8 @@ footer ul li{
     }
 
 .imagenesAnimation2 {
-    animation: imagenesAnimation2 0.65s linear both;
+    animation: imagenesAnimation2 0.65s linear;
+    z-index: -1;
 }
     @keyframes imagenesAnimation2 {
         0% {transform: translatex(-500px) ;}
@@ -696,7 +698,8 @@ footer ul li{
     }
 
 .imagenesAnimation3 {
-    animation: imagenesAnimation3 0.65s linear both;
+    animation: imagenesAnimation3 0.65s linear;
+    z-index: -1;
 }
     @keyframes imagenesAnimation3 {
         0% {transform: translatey(-500px) ;}
@@ -704,7 +707,8 @@ footer ul li{
     }
 
 .imagenesAnimation4 {
-    animation: imagenesAnimation4 2s linear both;
+    animation: imagenesAnimation4 2s linear;
+    z-index: -1;
 }
     @keyframes imagenesAnimation4 {
         0% {opacity: 0;}
