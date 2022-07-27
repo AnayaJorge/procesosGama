@@ -1,0 +1,51 @@
+nav{
+    position: sticky;
+    top: 60px;
+    background-color: whitesmoke;
+    margin-right: 5px;
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 2px lightgray solid ;
+}
+
+.menuNav{
+    margin: 0;
+    padding: 0;
+}
+.menuNav > li{
+    position:relative;
+    display: inline-block;
+}
+
+.menuNav > li > a{
+    display: block;
+    padding: 10px;
+    color: grey;
+    text-decoration: none;
+    width: 100px;
+    margin: 0px 0px;
+}
+
+.menuNav li a:hover{
+    color:whitesmoke;
+    background-color: grey;
+    transition: all .4s;
+}
+
+.submenuNav{
+    position: absolute;
+    background-color: grey;
+    width: 250px;
+    margin: 0px 0px;
+    padding: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.actual {
+    margin-bottom: 0px;
+    border-bottom: 5px #d10613 solid;
+    background-color: rgb(230, 230, 230);
+}

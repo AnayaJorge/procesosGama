@@ -1,0 +1,225 @@
+// declaramos las areas de las grillas
+
+header{
+    grid-area: header;
+}
+nav{
+    grid-area: nav;
+}
+.titleIndex{
+    grid-area: titleIndex;
+}
+.titlePages{
+    grid-area: titlePages;
+}
+.titleProcesos{
+    grid-area: titleProcesos;
+}
+.detailMenu{
+    grid-area: detailMenu;
+}
+.textIndex{
+    grid-area: textoIndex;
+}
+.textPages{
+    grid-area: textoPages;
+}
+.textProcesos{
+    grid-area: textoProcesos;
+}
+.imagenIndex{
+    grid-area: galleryIndex;
+}
+.imagenPages{
+    grid-area: galleryPages;
+}
+footer{
+    grid-area: footer;
+}
+
+
+// generamos las grillas
+.gridIndex{
+    margin-bottom: 1,5em;
+    width: 100%;
+    display: grid;
+    gap: 5px;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "titleIndex"
+    "galleryIndex"
+    "textoIndex"
+    "footer";
+}
+
+.gridPages{
+    margin-bottom: 1,5em;
+    width: 100%;
+    display: grid;
+    gap: 5px;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "titlePages"
+    "galleryPages"
+    "textoPages"
+    "footer";
+}
+
+.gridProcesos{
+    margin-bottom: 1,5em;
+    width: 100%;
+    display: grid;
+    gap: 5px;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "titleProcesos"
+    "textoProcesos"
+    "footer";
+}
+
+.gridContacto{
+    margin-bottom: 1,5em;
+    width: 100%;
+    display: grid;
+    gap: 5px;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "titleContacto"
+    "textoContacto"
+    "footer";
+}
+
+@media (min-width:500px){
+    .imagenIndex{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: center;
+    }
+
+    .imagenPages{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: center;
+    }
+
+    footer ul{
+        justify-content: flex-end;
+    }
+}
+
+@media (min-width:768px){
+    .gridIndex{
+        margin-bottom: 1,5em;
+        width: 100%;
+        display: grid;
+        gap: 5px;
+        grid-template-areas: 
+        "header header"
+        "nav nav"
+        "galleryIndex titleIndex"
+        "galleryIndex textoIndex"
+        "footer footer";
+        grid-template-columns: 1fr 2.5fr;
+    }
+
+    .gridPages{
+        margin-bottom: 1,5em;
+        width: 100%;
+        display: grid;
+        gap: 5px;
+        grid-template-areas: 
+        "header header"
+        "nav nav"
+        "titlePages galleryPages"
+        "textoPages galleryPages"
+        "footer footer";
+        grid-template-columns: 2.5fr 1fr;
+    }
+
+    .gridProcesos{
+        margin-bottom: 1,5em;
+        width: 100%;
+        display: grid;
+        gap: 5px;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "titleProcesos"
+        "textoProcesos"
+        "footer";
+    }
+    .textProcesos{
+        display: flex;
+        display: row;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-width:992px){
+    .navbar-expand-lg .navbar-collapse{
+        flex-direction: row-reverse;
+    }
+
+    .menuNav{
+        li{ 
+            &:hover{
+                .submenuNav{
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+            .submenuNav{
+                li{
+                    a{
+                        display: block;
+                        padding: 10px;
+                        color: whitesmoke;
+                        text-decoration: none;                       
+                        &:hover{
+                            color:gray;
+                            background-color: lightgrey;
+                            transition: all .5s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:1024px){
+    .gridIndex{
+        margin-bottom: 1,5em;
+        width: 100%;
+        display: grid;
+        gap: 5px;
+        grid-template-areas: 
+        "header header header"
+        "nav nav nav"
+        "galleryIndex titleIndex titleIndex"
+        "galleryIndex textoIndex textoIndex"
+        "footer footer footer";
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .gridPages{
+        margin-bottom: 1,5em;
+        width: 100%;
+        display: grid;
+        gap: 5px;
+        grid-template-areas: 
+        "header header header"
+        "nav nav nav"
+        "galleryPages titlePages titlePages"
+        "galleryPages textoPages textoPages"
+        "footer footer footer";
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
