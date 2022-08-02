@@ -12,7 +12,7 @@ header{
     background-color: lightgray;
     color:#d10613;
 
-    div{
+    & div{
         display: flex;
         justify-content:flex-end;
     }
