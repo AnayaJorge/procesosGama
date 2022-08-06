@@ -1,0 +1,14 @@
+/*Desarrollamos Mixins*/
+@mixin setMedia ($marginbottom, $width, $display, $gap){
+    margin-bottom: $marginbottom;
+    width: $width;
+    display: $display;
+    gap: $gap;
+}
+
+@mixin setImage ($display, $flex-direction, $justify-content, $align-content){
+    display: $display;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-content: $align-content;
+}

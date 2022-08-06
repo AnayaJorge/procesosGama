@@ -1,41 +1,41 @@
+/*Desarrollamos el Nav*/
+
 nav{
     position: sticky;
     top: 60px;
-    background-color: whitesmoke;
+    background-color: $colorBajo;
     margin-right: 5px;
     font-size: 14px;
     display: flex;
     justify-content: flex-start;
-    border-bottom: 2px lightgray solid ;
+    border-bottom: 2px $colorMedio solid ;
 }
 
 .menuNav{
     margin: 0;
     padding: 0;
-}
-.menuNav > li{
+    > li{
     position:relative;
     display: inline-block;
-}
-
-.menuNav > li > a{
-    display: block;
-    padding: 10px;
-    color: grey;
-    text-decoration: none;
-    width: 100px;
-    margin: 0px 0px;
-}
-
-.menuNav li a:hover{
-    color:whitesmoke;
-    background-color: grey;
-    transition: all .4s;
+        > a {
+            display: block;
+            padding: 10px;
+            color: $colorFuerte;
+            text-decoration: none;
+            width: 100px;
+            margin: 0px 0px;
+            &:hover{
+                color: $colorBajo;
+                background-color: $colorFuerte;
+                transition: all .4s;
+            }
+        }
+    }
 }
 
 .submenuNav{
     position: absolute;
-    background-color: grey;
+    background-color: $colorFuerte;
     width: 250px;
     margin: 0px 0px;
     padding: 0;
@@ -46,6 +46,6 @@ nav{
 
 .actual {
     margin-bottom: 0px;
-    border-bottom: 5px #d10613 solid;
-    background-color: rgb(230, 230, 230);
+    border-bottom: 5px $colorGama solid;
+    background-color: $colorSemiBajo;
 }

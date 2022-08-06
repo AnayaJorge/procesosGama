@@ -1,13 +1,20 @@
-/* Paletas de colores https://colorhunt.co/ */
-/* Main:        #E5E3C9 */
-/* Detalles:    #B4CFB0 */
-/* Headder:     #94B49F */
-/* Letter:      #789395 */
-
-
-
-
 /* Usar dos tipologías por página https://fonts.google.com/*/
-/* Mis Fuentes: 
-font-family: 'Anek Malayalam', sans-serif;
-font-family: 'Open Sans', sans-serif;*/
+/* Mis Fuentes: */
+
+// Importar Fuentes desde style.css / Se coloca antes del Retet
+@import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@300&family=Open+Sans:wght@300&display=swap');
+
+$fontPrincipal: 'Anek Malayalam', sans-serif;
+$fontSecundary: 'Open Sans', sans-serif;
+
+
+/*Mis colores*/
+/* Opción de página con Paletas de colores https://colorhunt.co/ */
+$colorBajo: whitesmoke;
+$colorSemiBajo:rgb(230, 230, 230);
+$colorMedio: lightgray;
+$colorFuerte: grey;
+$colorGama: #d10613;
+
+
+

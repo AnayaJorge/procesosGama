@@ -1,21 +1,16 @@
+/*Desarrollamos las imagenes*/
+
 .imagenIndex{
     display: flex;
     flex-direction: column;
     align-items: Center;
-}
-
-.imagenIndex img{
+    img{
     padding: 5px;
+    }
 }
 
 .imagenPages{
-    display: flex;
-    flex-direction: column;
-    align-items: Center;
-}
-
-.imagenPages img{
-    padding: 5px;
+    @extend .imagenIndex;
 }
 
 .martillo{

@@ -1,7 +1,9 @@
+/*Formato de los Textos*/
+
 body{
-    background-color: whitesmoke;
-    color: gray;
-    font-family: 'Anek Malayalam', sans-serif;
+    background-color: $colorBajo;
+    color: $colorFuerte;
+    font-family: $fontPrincipal;
 }
 
 ul{
@@ -23,38 +25,27 @@ h3, h4{
     padding: 10px;
 }
 
-.textIndex{
-    margin: 5px;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Open Sans', sans-serif;
-    div{
-        padding-bottom: 10px;
-        text-align: justify;
-    }
-}
-
-.textPages{
-    margin: 5px;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Open Sans', sans-serif;
-    div{
-        padding-bottom: 10px;
-        text-align: justify;
-    }
-}
-
 .tittleProcesos{
     padding: 20px 20px 10px 10px;
 }
 
-.textProcesos{
-    display: flex;
-    display: row;
-    padding: 5px 40px 20px 40px;
+.textIndex{
+    margin: 5px;
     display: flex;
     flex-direction: column;
+    font-family: $fontSecundary;
+    text-align: justify;
+    div{
+        padding-bottom: 10px;
+    }
+}
+
+.textPages{
+    @extend .textIndex;
+}
+
+.textProcesos{
+    padding: 5px 40px 20px 40px;
 }
 
 .textProcesos div{
@@ -62,7 +53,7 @@ h3, h4{
 }
 
 .new{
-    color: #d10613;
+    color: $colorGama;
 }
 
 .erase  {
@@ -75,7 +66,7 @@ h3, h4{
     li{
         a{
             text-decoration: none;
-            color: grey;
+            color: $colorFuerte;
         }
     }
 }
@@ -138,8 +129,8 @@ table, tr, td{
 
 .accordion-button:not(.collapsed) {
     position: static;
-    color: grey;
-    background-color: whitesmoke;
+    color: $colorFuerte;
+    background-color: $colorBajo;
     box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
 }
 

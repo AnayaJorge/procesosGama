@@ -1,21 +1,13 @@
-// Vincular layout y utilities
+// Vincular utilities
 @import "./utilities/variables";
-@import "./layout/animations";
+@import "./utilities/mixins";
+
+/*Vincular layout*/
+@import "./layout/reset";
+@import "./layout/header";
+@import "./layout/nav";
 @import "./layout/footer";
 @import "./layout/grids";
-@import "./layout/header";
-@import "./layout/images";
-@import "./layout/nav";
 @import "./layout/texts";
-
-// Importar Fuentes desde style.css / Se coloca antes del Retet
-@import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@300&family=Open+Sans:wght@300&display=swap');
-
-
-// Reset= quitar los estilos que tienen por defecto los distintos navegadores
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+@import "./layout/images";
+@import "./layout/animations";

@@ -1,3 +1,5 @@
+/*Desarrollamos el header*/
+
 header{
     position:sticky;
     top: 0px;
@@ -9,8 +11,8 @@ header{
     font-weight: bolder;
     font-size: 40px;
     padding: 5px;
-    background-color: lightgray;
-    color:#d10613;
+    background-color: $colorMedio;
+    color: $colorGama;
 
     & div{
         display: flex;

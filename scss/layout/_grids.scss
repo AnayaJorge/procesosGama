@@ -1,5 +1,6 @@
-// declaramos las areas de las grillas
+/*Desarrollamos las Grids*/
 
+/*Declaramos las areas de las grillas*/
 header{
     grid-area: header;
 }
@@ -38,12 +39,9 @@ footer{
 }
 
 
-// generamos las grillas
+/*Generamos las grillas*/
 .gridIndex{
-    margin-bottom: 1,5em;
-    width: 100%;
-    display: grid;
-    gap: 5px;
+    @include setMedia(1.5em, 100%, grid, 5px);
     grid-template-areas: 
     "header"
     "nav"
@@ -54,10 +52,7 @@ footer{
 }
 
 .gridPages{
-    margin-bottom: 1,5em;
-    width: 100%;
-    display: grid;
-    gap: 5px;
+    @include setMedia(1.5em, 100%, grid, 5px);
     grid-template-areas: 
     "header"
     "nav"
@@ -68,10 +63,7 @@ footer{
 }
 
 .gridProcesos{
-    margin-bottom: 1,5em;
-    width: 100%;
-    display: grid;
-    gap: 5px;
+    @include setMedia(1.5em, 100%, grid, 5px);
     grid-template-areas: 
     "header"
     "nav"
@@ -81,10 +73,7 @@ footer{
 }
 
 .gridContacto{
-    margin-bottom: 1,5em;
-    width: 100%;
-    display: grid;
-    gap: 5px;
+    @include setMedia(1.5em, 100%, grid, 5px);
     grid-template-areas: 
     "header"
     "nav"
@@ -95,17 +84,11 @@ footer{
 
 @media (min-width:500px){
     .imagenIndex{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-content: center;
+        @include setImage(flex, column, flex-start, center);
     }
 
     .imagenPages{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-content: center;
+        @include setImage(flex, column, flex-start, center);
     }
 
     footer ul{
@@ -115,10 +98,7 @@ footer{
 
 @media (min-width:768px){
     .gridIndex{
-        margin-bottom: 10px;
-        width: 100%;
-        display: grid;
-        gap: 5px;
+        @include setMedia(10px, 100%, grid, 5px);
         grid-template-areas: 
         "header header"
         "nav nav"
@@ -129,10 +109,7 @@ footer{
     }
 
     .gridPages{
-        margin-bottom: 1,5em;
-        width: 100%;
-        display: grid;
-        gap: 5px;
+        @include setMedia(10px, 100%, grid, 5px);
         grid-template-areas: 
         "header header"
         "nav nav"
@@ -143,26 +120,68 @@ footer{
     }
 
     .gridProcesos{
-        margin-bottom: 1,5em;
-        width: 100%;
-        display: grid;
-        gap: 5px;
+        @include setMedia(10px, 100%, grid, 5px);
         grid-template-areas: 
         "header"
         "nav"
         "titleProcesos"
         "textoProcesos"
         "footer";
+        grid-template-columns: 1fr;
+    }
+
+    .gridContacto{
+        @include setMedia(10px, 100%, grid, 5px);
+        grid-template-areas: 
+        "header"
+        "nav"
+        "titleContacto"
+        "textoContacto"
+        "footer";
+        grid-template-columns: 1fr;
     }
     .textProcesos{
-        display: flex;
-        display: row;
         display: flex;
         flex-direction: column;
     }
 }
 
 @media (min-width:992px){
+    .gridIndex{
+        @include setMedia(10px, 100%, grid, 5px);
+        grid-template-areas: 
+        "header header header"
+        "nav nav nav"
+        "galleryIndex titleIndex titleIndex"
+        "galleryIndex textoIndex textoIndex"
+        "footer footer footer";
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .gridPages{
+        @include setMedia(10px, 100%, grid, 5px);
+        grid-template-areas: 
+        "header header header"
+        "nav nav nav"
+        "galleryPages titlePages titlePages"
+        "galleryPages textoPages textoPages"
+        "footer footer footer";
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .gridProcesos{
+        @include setMedia(10px, 100%, grid, 5px);
+        grid-template-areas: 
+        "header"
+        "nav"
+        "titleProcesos"
+        "textoProcesos"
+        "footer";
+        grid-template-columns: 1fr;
+    }
+
+    
+
     .navbar-expand-lg .navbar-collapse{
         flex-direction: row-reverse;
     }
@@ -180,46 +199,16 @@ footer{
                     a{
                         display: block;
                         padding: 10px;
-                        color: whitesmoke;
+                        color: $colorBajo;
                         text-decoration: none;                       
                         &:hover{
-                            color:gray;
-                            background-color: lightgrey;
+                            color: $colorFuerte;
+                            background-color: $colorBajo;
                             transition: all .5s;
                         }
                     }
                 }
             }
         }
-    }
-}
-
-@media (min-width:1024px){
-    .gridIndex{
-        margin-bottom: 10px;
-        width: 100%;
-        display: grid;
-        gap: 5px;
-        grid-template-areas: 
-        "header header header"
-        "nav nav nav"
-        "galleryIndex titleIndex titleIndex"
-        "galleryIndex textoIndex textoIndex"
-        "footer footer footer";
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .gridPages{
-        margin-bottom: 10px;
-        width: 100%;
-        display: grid;
-        gap: 5px;
-        grid-template-areas: 
-        "header header header"
-        "nav nav nav"
-        "galleryPages titlePages titlePages"
-        "galleryPages textoPages textoPages"
-        "footer footer footer";
-        grid-template-columns: 1fr 1fr 1fr;
     }
 }
