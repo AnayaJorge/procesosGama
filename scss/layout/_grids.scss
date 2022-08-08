@@ -16,6 +16,9 @@ nav{
 .titleProcesos{
     grid-area: titleProcesos;
 }
+.titleFormulario{
+    grid-area: titleFormulario;
+}
 .detailMenu{
     grid-area: detailMenu;
 }
@@ -27,6 +30,9 @@ nav{
 }
 .textProcesos{
     grid-area: textoProcesos;
+}
+.textFormulario{
+    grid-area: textoFormulario;
 }
 .imagenIndex{
     grid-area: galleryIndex;
@@ -69,6 +75,16 @@ footer{
     "nav"
     "titleProcesos"
     "textoProcesos"
+    "footer";
+}
+
+.gridFormulario{
+    @include setMedia(1.5em, 100%, grid, 5px);
+    grid-template-areas: 
+    "header"
+    "nav"
+    "titleFormulario"
+    "textoFormulario"
     "footer";
 }
 
@@ -130,6 +146,17 @@ footer{
         grid-template-columns: 1fr;
     }
 
+    .gridFormulario{
+        @include setMedia(10px, 100%, grid, 5px);
+        grid-template-areas: 
+        "header"
+        "nav"
+        "titleFormulario"
+        "textoFormulario"
+        "footer";
+        grid-template-columns: 1fr;
+    }
+    
     .gridContacto{
         @include setMedia(10px, 100%, grid, 5px);
         grid-template-areas: 
@@ -149,6 +176,7 @@ footer{
 @media (min-width:992px){
     .gridIndex{
         @include setMedia(10px, 100%, grid, 5px);
+        @include navWidth;
         grid-template-areas: 
         "header header header"
         "nav nav nav"
@@ -156,10 +184,11 @@ footer{
         "galleryIndex textoIndex textoIndex"
         "footer footer footer";
         grid-template-columns: 1fr 1fr 1fr;
-    }
+        }
 
     .gridPages{
         @include setMedia(10px, 100%, grid, 5px);
+        @include navWidth;
         grid-template-areas: 
         "header header header"
         "nav nav nav"
@@ -171,6 +200,7 @@ footer{
 
     .gridProcesos{
         @include setMedia(10px, 100%, grid, 5px);
+        @include navWidth;
         grid-template-areas: 
         "header"
         "nav"
@@ -180,7 +210,29 @@ footer{
         grid-template-columns: 1fr;
     }
 
-    
+    .gridFormulario{
+        @include setMedia(10px, 100%, grid, 5px);
+        @include navWidth;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "titleFormulario"
+        "textoFormulario"
+        "footer";
+        grid-template-columns: 1fr;
+    }
+
+    .gridContacto{
+        @include setMedia(10px, 100%, grid, 5px);
+        @include navWidth;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "titleContacto"
+        "textoContacto"
+        "footer";
+        grid-template-columns: 1fr;
+    }
 
     .navbar-expand-lg .navbar-collapse{
         flex-direction: row-reverse;

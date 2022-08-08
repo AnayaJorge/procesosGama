@@ -12,3 +12,10 @@
     justify-content: $justify-content;
     align-content: $align-content;
 }
+
+@mixin navWidth {
+    .menuNav> li >a {
+        width: 100px;
+        margin: 0px;
+    }
+}
