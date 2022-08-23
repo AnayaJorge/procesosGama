@@ -19,3 +19,22 @@
         }
     }
 }
+
+.btn-primary{
+    background-color: $colorMedio;
+    border: none;
+    color: black;
+    font-weight:bolder;
+    &:hover{
+        background-color: $colorFuerte;
+        border: none;
+        color: $colorBajo;
+    }
+
+    &:focus{
+        background-color: $colorFuerte;
+        border: none;
+        color: $colorBajo;
+        animation: alerta 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+}

@@ -49,7 +49,7 @@ nav {
   top: 60px;
   background-color: whitesmoke;
   margin-right: 5px;
-  font-size: 14px;
+  font-size: 16px;
   display: flex;
   justify-content: flex-start;
   border-bottom: 2px lightgray solid;
@@ -66,7 +66,7 @@ nav {
 .menuNav > li > a {
   display: block;
   padding: 10px;
-  color: grey;
+  color: black;
   text-decoration: none;
   width: auto;
   margin: 0px 5px;
@@ -95,11 +95,9 @@ nav {
 }
 
 /*Desarrollamos el footer*/
-footer {
-  padding-bottom: 50px;
-}
 footer ul {
   padding: 0 50px 0 50px;
+  margin: 0;
   background-color: lightgray;
   display: flex;
   justify-content: center;
@@ -134,6 +132,10 @@ nav {
   grid-area: titleFormulario;
 }
 
+.titleContacto {
+  grid-area: titleContacto;
+}
+
 .detailMenu {
   grid-area: detailMenu;
 }
@@ -154,6 +156,10 @@ nav {
   grid-area: textoFormulario;
 }
 
+.textContacto {
+  grid-area: textoContacto;
+}
+
 .imagenIndex, .imagenPages {
   grid-area: galleryIndex;
 }
@@ -168,31 +174,40 @@ footer {
 
 /*Generamos las grillas*/
 .gridIndex {
-  margin-bottom: 1.5em;
+  margin-bottom: 10px;
   width: 100%;
   display: grid;
   gap: 5px;
   grid-template-areas: "header" "nav" "titleIndex" "galleryIndex" "textoIndex" "footer";
 }
+.gridIndex .textIndex, .gridIndex .textPages {
+  max-width: 850px;
+}
 
 .gridPages {
-  margin-bottom: 1.5em;
+  margin-bottom: 10px;
   width: 100%;
   display: grid;
   gap: 5px;
   grid-template-areas: "header" "nav" "titlePages" "galleryPages" "textoPages" "footer";
 }
+.gridPages .textPages {
+  max-width: 850px;
+}
 
 .gridProcesos {
-  margin-bottom: 1.5em;
+  margin-bottom: 10px;
   width: 100%;
   display: grid;
   gap: 5px;
   grid-template-areas: "header" "nav" "titleProcesos" "textoProcesos" "footer";
 }
+.gridProcesos .textProcesos {
+  max-width: 850px;
+}
 
 .gridFormulario {
-  margin-bottom: 1.5em;
+  margin-bottom: 10px;
   width: 100%;
   display: grid;
   gap: 5px;
@@ -200,11 +215,14 @@ footer {
 }
 
 .gridContacto {
-  margin-bottom: 1.5em;
+  margin-bottom: 10px;
   width: 100%;
   display: grid;
   gap: 5px;
   grid-template-areas: "header" "nav" "titleContacto" "textoContacto" "footer";
+}
+.gridContacto .textContacto {
+  max-width: 850px;
 }
 
 @media (min-width: 500px) {
@@ -226,56 +244,21 @@ footer {
 }
 @media (min-width: 768px) {
   .gridIndex {
-    margin-bottom: 10px;
-    width: 100%;
-    display: grid;
-    gap: 5px;
     grid-template-areas: "header header" "nav nav" "galleryIndex titleIndex" "galleryIndex textoIndex" "footer footer";
     grid-template-columns: 1fr 2.5fr;
   }
   .gridPages {
-    margin-bottom: 10px;
-    width: 100%;
-    display: grid;
-    gap: 5px;
     grid-template-areas: "header header" "nav nav" "titlePages galleryPages" "textoPages galleryPages" "footer footer";
     grid-template-columns: 2.5fr 1fr;
-  }
-  .gridProcesos {
-    margin-bottom: 10px;
-    width: 100%;
-    display: grid;
-    gap: 5px;
-    grid-template-areas: "header" "nav" "titleProcesos" "textoProcesos" "footer";
-    grid-template-columns: 1fr;
-  }
-  .gridFormulario {
-    margin-bottom: 10px;
-    width: 100%;
-    display: grid;
-    gap: 5px;
-    grid-template-areas: "header" "nav" "titleFormulario" "textoFormulario" "footer";
-    grid-template-columns: 1fr;
-  }
-  .gridContacto {
-    margin-bottom: 10px;
-    width: 100%;
-    display: grid;
-    gap: 5px;
-    grid-template-areas: "header" "nav" "titleContacto" "textoContacto" "footer";
-    grid-template-columns: 1fr;
   }
   .textProcesos {
     display: flex;
     flex-direction: column;
+    margin: 0 10% 0 10%;
   }
 }
 @media (min-width: 992px) {
   .gridIndex {
-    margin-bottom: 10px;
-    width: 100%;
-    display: grid;
-    gap: 5px;
     grid-template-areas: "header header header" "nav nav nav" "galleryIndex titleIndex titleIndex" "galleryIndex textoIndex textoIndex" "footer footer footer";
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -284,10 +267,6 @@ footer {
     margin: 0px;
   }
   .gridPages {
-    margin-bottom: 10px;
-    width: 100%;
-    display: grid;
-    gap: 5px;
     grid-template-areas: "header header header" "nav nav nav" "galleryPages titlePages titlePages" "galleryPages textoPages textoPages" "footer footer footer";
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -295,37 +274,13 @@ footer {
     width: 100px;
     margin: 0px;
   }
-  .gridProcesos {
-    margin-bottom: 10px;
-    width: 100%;
-    display: grid;
-    gap: 5px;
-    grid-template-areas: "header" "nav" "titleProcesos" "textoProcesos" "footer";
-    grid-template-columns: 1fr;
-  }
   .gridProcesos .menuNav > li > a {
     width: 100px;
     margin: 0px;
   }
-  .gridFormulario {
-    margin-bottom: 10px;
-    width: 100%;
-    display: grid;
-    gap: 5px;
-    grid-template-areas: "header" "nav" "titleFormulario" "textoFormulario" "footer";
-    grid-template-columns: 1fr;
-  }
   .gridFormulario .menuNav > li > a {
     width: 100px;
     margin: 0px;
-  }
-  .gridContacto {
-    margin-bottom: 10px;
-    width: 100%;
-    display: grid;
-    gap: 5px;
-    grid-template-areas: "header" "nav" "titleContacto" "textoContacto" "footer";
-    grid-template-columns: 1fr;
   }
   .gridContacto .menuNav > li > a {
     width: 100px;
@@ -333,6 +288,7 @@ footer {
   }
   .navbar-expand-lg .navbar-collapse {
     flex-direction: row-reverse;
+    justify-content: flex-end;
   }
   .menuNav li:hover .submenuNav {
     visibility: visible;
@@ -345,7 +301,7 @@ footer {
     text-decoration: none;
   }
   .menuNav li .submenuNav li a:hover {
-    color: grey;
+    color: black;
     background-color: whitesmoke;
     transition: all 0.5s;
   }
@@ -353,12 +309,16 @@ footer {
 /*Formato de los Textos*/
 body {
   background-color: whitesmoke;
-  color: grey;
+  color: black;
   font-family: "Anek Malayalam", sans-serif;
 }
 
 ul {
   list-style: none;
+}
+
+div {
+  padding: 5px;
 }
 
 h1 {
@@ -370,7 +330,6 @@ h1 {
 h2 {
   font-size: 20px;
   margin: 10px 5px 5px 5px;
-  padding: 5px;
   font-weight: bolder;
 }
 
@@ -417,7 +376,7 @@ h3, h4 {
 }
 .listDots li a {
   text-decoration: none;
-  color: grey;
+  color: black;
 }
 
 .textContacto {
@@ -467,10 +426,14 @@ table, tr, td {
 .accordion-button {
   position: static;
 }
+.accordion-button:focus {
+  -webkit-animation: alerta 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: alerta 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
 
 .accordion-button:not(.collapsed) {
   position: static;
-  color: grey;
+  color: black;
   background-color: whitesmoke;
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
 }
@@ -500,6 +463,25 @@ table, tr, td {
   overflow: hidden;
 }
 
+.btn-primary {
+  background-color: lightgray;
+  border: none;
+  color: black;
+  font-weight: bolder;
+}
+.btn-primary:hover {
+  background-color: grey;
+  border: none;
+  color: whitesmoke;
+}
+.btn-primary:focus {
+  background-color: grey;
+  border: none;
+  color: whitesmoke;
+  -webkit-animation: alerta 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: alerta 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
 /*Desarrollamos las imagenes*/
 .imagenIndex, .imagenPages {
   display: flex;
@@ -516,11 +498,6 @@ table, tr, td {
 }
 
 /*Colocar Animaciones a los elementos*/
-.alerta {
-  -webkit-animation: alerta 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: alerta 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
 /* ----------------------------------------------
  * Generated by Animista on 2022-7-15 13:53:34
  * Licensed under FreeBSD License.
@@ -532,6 +509,11 @@ table, tr, td {
  * animation shadow-drop-center
  * ----------------------------------------
  */
+.alerta {
+  -webkit-animation: alerta 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: alerta 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
 @-webkit-keyframes alerta {
   0% {
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
@@ -540,6 +522,7 @@ table, tr, td {
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
   }
 }
+
 @keyframes alerta {
   0% {
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
@@ -781,4 +764,7 @@ table, tr, td {
   100% {
     opacity: 1;
   }
+}
+.martillo {
+  z-index: -1;
 }/*# sourceMappingURL=style.css.map */
